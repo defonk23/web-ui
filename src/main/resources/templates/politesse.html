@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> POLITESSE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    </head>
+    <body>
+        <div class="container">
+            <br><br>
+        <a th:href="@{/}" class="btn btn-info" >Go to Home</a>
+
+        <br><br><br>
+        <form class="form-inline" method="POST" th:action="@{/enregistrer}" th:object="${salutUI}">
+            
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="name" class="sr-only">NOM:</label>
+                <input type="text" class="form-control"  placeholder="Entrer votre nom" th:field="*{name}">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Saluer</button>
+        </form>
+        </div>
+        <script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+        <script th:src="@{/js/popper.min.js}"></script>
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+    </body>
+</html>

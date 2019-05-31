@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> ACCUEIL</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    </head>
+    <body>
+        <div class="container">
+            <div> HELLO EXPERTUS ! </div>
+            <a th:href="@{/politesse.htm}" class="btn btn-info">Politesse</a>
+            <span th:text="${message}"> </span>
+        </div>
+        
+        <script th:src="@{/js/jquery-3.4.1.min.js}"> </script>
+        <script th:src="@{/js/popper.min.js}"> </script>
+        <script th:src="@{/js/bootstrap.min.js}"> </script>
+    </body>
+</html>
