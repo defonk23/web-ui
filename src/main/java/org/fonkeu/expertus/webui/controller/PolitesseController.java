@@ -38,6 +38,7 @@ public class PolitesseController {
     
     @GetMapping("/politesse.htm")
     public ModelAndView Politesse(){
+        
         return new ModelAndView("politesse");
         
     }
