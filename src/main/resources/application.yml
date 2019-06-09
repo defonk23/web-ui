@@ -1,4 +1,4 @@
 ## YAML Template.
 ---
 expertus:
-    backend: http://localhost:8084
+    backend: https://expertus-api.herokuapp.com
