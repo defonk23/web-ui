@@ -52,6 +52,7 @@ public class HomeController {
      return "redirect:/politesse.htm";
     }   
     
+    
     @ModelAttribute("salutUI")
     public SalutUI salutUI(){
         return new SalutUI();
