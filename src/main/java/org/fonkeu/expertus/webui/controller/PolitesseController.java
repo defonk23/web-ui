@@ -43,18 +43,4 @@ public class PolitesseController {
         
     }
     
-    @PostMapping("/enregistrer")
-    public String enregistrer(@ModelAttribute("salutUI")SalutUI salut, final RedirectAttributes redirectAttributes){
-        
-   
-        ResponseEntity <String> responseEntity= restTemplate.getForEntity(backendURL+"/api/hello?name="+salut.getName(), String.class);
-        log.info(responseEntity.getBody());
-        redirectAttributes.addFlashAttribute("message", responseEntity.getBody());
-     return "redirect:/";
-    }   
-    
-    @ModelAttribute("salutUI")
-    public SalutUI salutUI(){
-        return new SalutUI();
-    }
 }
