@@ -42,7 +42,10 @@ public class HomeController {
     @PostMapping("/entrer")
     public String entrer(@ModelAttribute("salutUI")SalutUI salut, final RedirectAttributes redirectAttributes){
         
-
+       
+        if(salut.getName()==null) return "redirect:/";
+        if((salut.getName()).isEmpty()) return "redirect:/";
+        if((salut.getName()).equalsIgnoreCase("")) return "redirect:/";
         ResponseEntity <String> responseEntity= restTemplate.getForEntity(backendURL+"/api/hello?name="+salut.getName(), String.class);
         log.info(responseEntity.getBody());
         redirectAttributes.addFlashAttribute("message", responseEntity.getBody());
