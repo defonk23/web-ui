@@ -6,20 +6,45 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title> ACCUEIL</title>
+        <title> CONNEXION </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- font -->
+        <link th:href="@{https://fonts.googleapis.com/css?family=Raleway:300,400,500,600&display=swap}" rel="stylesheet">
+
+        <!-- css -->
         <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+        <link rel="stylesheet" th:href="@{/css/home.css}" />
     </head>
     <body>
-        <div class="container">
-            <div> HELLO EXPERTUS ! </div>
-            <a th:href="@{/politesse.htm}" class="btn btn-info">Politesse</a>
-            <span th:text="${message}"> </span>
-        </div>
-        
-        <script th:src="@{/js/jquery-3.4.1.min.js}"> </script>
-        <script th:src="@{/js/popper.min.js}"> </script>
-        <script th:src="@{/js/bootstrap.min.js}"> </script>
+
+
+
+
+        <!-- banniere --> 
+        <section class="container-fluid banner">
+            <div class="ban">
+                <img th:src="@{/images/fond_bois.jpg}" alt="bannière du site" />
+            </div>
+            <div class="inner-banner">
+                <h1> HELLO EXPERTUS ! </h1> <br>
+                <h1> Bienvenue sur mon Test technique </h1>   <br> <br>
+                <form id="monForm" class="form-inline" method="POST" th:action="@{/entrer}" th:object="${salutUI}">
+
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="name" class="sr-only">NOM : &nbsp;</label>
+                        <input type="text" class="form-control"  placeholder="Entrer votre nom" th:field="*{name}">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Se connecter</button>
+                </form>
+            </div>
+
+        </section>
+        <!-- end banniere -->
+
+        <script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+        <script th:src="@{/js/popper.min.js}"></script>
+        <script th:src="@{/js/bootstrap.min.js}"></script>
     </body>
 </html>

@@ -6,28 +6,132 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title> POLITESSE</title>
+        <title> ACCUIEL </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- font -->
+        <link th:href="@{https://fonts.googleapis.com/css?family=Raleway:300,400,500,600&display=swap}" rel="stylesheet">
+
+        <!-- css -->
         <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+        <link rel="stylesheet" th:href="@{/css/style.css}" />
     </head>
-    <body>
+
+    <!-- contenu du site --> 
+
+    <body> 
+        <!-- HEADER -->
+        <header class="container-fluid header">
+            <div class="container"> 
+                <a th:href="@{/}" class="logo"> Mon Test Technique </a>
+                <nav class="menu">
+
+                    <a th:href="@{/}" class="btn btn-block" >Se déconnecter</a>
+                </nav>
+            </div> 
+        </header>
+        <!-- END HEADER -->
+
+        <!-- banniere --> 
+        <section class="container-fluid banner">
+            <div class="ban">
+                <img th:src="@{/images/ban.jpg}" alt="bannière du site" />
+            </div>
+            <div class="inner-banner">
+                <h1> <span th:text="${message}"> </span> </h1>  
+            </div>
+
+        </section>
+        <!-- end banniere -->
+
+        <!-- à propos -->
+        <section class="container-fluid about">
+            <div class="container">
+                <h2 id="About"> A propos du test  </h2>
+                <hr class="separator">
+                <div class="row">
+
+                    <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+                        <h2> Intitulé </h2>
+                        <p>
+                            Liposem is a unique proprietary herbal formulation with antioxidant and hypolipidaemic properties. It contains 17 active herbal ingredients like Vrikshamla (Garcinia indica), Guggulu (Balsamodendron mukul), Saptaranga (Salacia sp.), Arjuna (Terminalia arjuna), Salmali (Bombax malabaricum), Madhuka (Madhuca indica) etc. It could help lower the atherogenic index and reduce body weight (obesity) when combined with a balanced diet and regular exercise. Liposem aids in curbing hyperlipidaemia to a certain level. Liposem could therapeutically minimize vascular initial damage and diet-induced hyperlipidaemia.It works on reducing LDL and Triglycerides and increasing HDL, which is helpful in reducing the risks of cardiovascular diseases. This herbal tablet may naturally act upon artherosclerosis by renormalizing the imbalanced lipid profiles and may help in offering key cardio-protection. Liposem™ is the Doctor’s ideal choice for cholesterol management, Naturally!
+                        </p>
+                    </article>
+                    <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+                        <h2> Travail à faire </h2>
+                        <p>
+                            Liposem is a unique proprietary herbal formulation with antioxidant and hypolipidaemic properties. It contains 17 active herbal ingredients like Vrikshamla (Garcinia indica), Guggulu (Balsamodendron mukul), Saptaranga (Salacia sp.), Arjuna (Terminalia arjuna), Salmali (Bombax malabaricum), Madhuka (Madhuca indica) etc. It could help lower the atherogenic index and reduce body weight (obesity) when combined with a balanced diet and regular exercise. Liposem aids in curbing hyperlipidaemia to a certain level. Liposem could therapeutically minimize vascular initial damage and diet-induced hyperlipidaemia.It works on reducing LDL and Triglycerides and increasing HDL, which is helpful in reducing the risks of cardiovascular diseases. This herbal tablet may naturally act upon artherosclerosis by renormalizing the imbalanced lipid profiles and may help in offering key cardio-protection. Liposem™ is the Doctor’s ideal choice for cholesterol management, Naturally!
+                        </p>
+                    </article>
+                    <article class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+                        <h2> Technologies </h2>
+                        <p>
+                            Liposem is a unique proprietary herbal formulation with antioxidant and hypolipidaemic properties. It contains 17 active herbal ingredients like Vrikshamla (Garcinia indica), Guggulu (Balsamodendron mukul), Saptaranga (Salacia sp.), Arjuna (Terminalia arjuna), Salmali (Bombax malabaricum), Madhuka (Madhuca indica) etc. It could help lower the atherogenic index and reduce body weight (obesity) when combined with a balanced diet and regular exercise. Liposem aids in curbing hyperlipidaemia to a certain level. Liposem could therapeutically minimize vascular initial damage and diet-induced hyperlipidaemia.It works on reducing LDL and Triglycerides and increasing HDL, which is helpful in reducing the risks of cardiovascular diseases. This herbal tablet may naturally act upon artherosclerosis by renormalizing the imbalanced lipid profiles and may help in offering key cardio-protection. Liposem™ is the Doctor’s ideal choice for cholesterol management, Naturally!ies.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- end à propos -->
+
+        <!-- footer / contact -->
+        <footer class="container-fluid footer">
+            <div class="container">
+ <!--               
+                <h2 id="contact"> Contactez moi! </h2>
+                <hr class="seperator"> 
+              
+                <div class="row">
+
+                    <div class="span6">
+                        <form class="formulaireContact">
+                            <div class="controls controls-row"> 
+                                <input type="text" class="span3" name="Name" autocomplete="off" id="Name" placeholder="Name"> 
+                                <input type="email" class="span3" name="email" autocomplete="off" id="email" placeholder="E-mail"> 
+                            </div> 
+                            <div class="controls">
+                                <textarea class="span6" rows="5" name="Message" id="Message" placeholder="Message"></textarea>
+                            </div> 
+                            <div class="controls"> 
+                                <button id="contact-submit" type="submit" class="btn btn-custom input-medium pull-right">Send</button> 
+                            </div>
+                        </form>
+
+                    </div>  
+                     
+                </div>
+  -->               
+                <p>
+                    Copyright (c) 2019 Copyright holder All Right Reserved.   
+                </p> 
+            </div>
+        </footer>    
+        <!-- en footer / contact -->         
+
+
+<!--
         <div class="container">
             <br><br>
-        <a th:href="@{/}" class="btn btn-info" >Go to Home</a>
+            <a th:href="@{/}" class="btn btn-info" >Go to Home</a>
 
-        <br><br><br>
-        <form class="form-inline" method="POST" th:action="@{/enregistrer}" th:object="${salutUI}">
-            
-            <div class="form-group mx-sm-3 mb-2">
-                <label for="name" class="sr-only">NOM:</label>
-                <input type="text" class="form-control"  placeholder="Entrer votre nom" th:field="*{name}">
-            </div>
-            <button type="submit" class="btn btn-primary mb-2">Saluer</button>
-        </form>
+            <br><br><br>
+            <form class="form-inline" method="POST" th:action="@{/enregistrer}" th:object="${salutUI}">
+
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="name" class="sr-only">NOM:</label>
+                    <input type="text" class="form-control"  placeholder="Entrer votre nom" th:field="*{name}">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Saluer</button>
+
+            </form>
         </div>
         <script th:src="@{/js/jquery-3.4.1.min.js}"></script>
         <script th:src="@{/js/popper.min.js}"></script>
-        <script th:src="@{/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/bootstrap.min.js}"></script>  
+     
+-->
     </body>
 </html>

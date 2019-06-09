@@ -1,0 +1,157 @@
+@charset "UTF-8"
+
+/* font-family: 'Raleway', sans-serif; */
+/*  bleu clair -->  #3498DB */
+/*  bleu sombre --> #2C3E50  */
+body, html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Raleway', sans-serif; 
+    background-color: #D7FFB6;
+}
+a, a:hover{
+    text-decoration: none;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.separator {
+    height: 3px;
+    width: 5%;
+    border: none;
+    box-shadow: none;
+    background-color: #3498DB;
+}
+
+
+.btn-custom {
+    background: #3498DB;
+    color: #ffffff;
+}
+
+
+/* header */
+.header {
+    background-color: #3498DB;
+    height: 70px;
+    line-height: 70px;
+}
+
+.logo {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    float: left;
+}
+
+.menu {
+    float: right;
+}
+
+.menu a {
+    color: #ffffff;
+    margin-right: 20px;
+}
+
+.menu a:hover {
+    color: #2C3E50;
+}
+
+/*  Banniere */
+.banner {
+    width: 100%;
+    max-width: 100%;
+}
+
+.ban {
+    width: 100%;
+    max-width: 100%; 
+    position: relative;
+}
+
+.ban img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.inner-banner {
+    position: absolute;
+    top: 2%; 
+    width: 100%;
+    text-align: center;
+}
+
+.inner-banner h1 {
+    color:  #ffffff;
+    text-shadow: 1px 1px 20px #000000;
+}
+
+.inner-banner .btn-custom {
+    background: #3498DB;
+    color: #ffffff;
+}
+
+/* About */
+.about article h2 {
+    text-align: center;
+}
+.about article {
+    margin-top: 10%;
+}
+#About {
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 10%;
+}
+
+/* contact */
+.footer {
+   background-color: #2C3E50; 
+   height: 100px;
+} 
+
+.footer p {
+   color: #ffffff; 
+   text-align: center;
+   padding-top: 5%;
+   
+}
+
+#contact {
+    color: #ffffff;
+    text-align: center;
+}
+
+.formulaireContact {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    align-content: center;
+}
+
+input {
+    margin-bottom: 20px
+}
+
+input[type=text]  {
+    height: 50px;
+    width: 500px;
+    border: none;
+}
+
+input[type=email]  {
+    height: 50px;
+    width: 500px;
+    border: none ;
+}
+
+textarea {
+    height: 200px;
+    width: 500px; 
+    resize: vertical;
+}
