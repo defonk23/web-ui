@@ -24,7 +24,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 /**
  *
- * @author TN
+ * @author FONKEU
  */
 @Controller
 public class HomeController {
@@ -49,6 +49,7 @@ public class HomeController {
         ResponseEntity <String> responseEntity= restTemplate.getForEntity(backendURL+"/api/hello?name="+salut.getName(), String.class);
         log.info(responseEntity.getBody());
         redirectAttributes.addFlashAttribute("message", responseEntity.getBody());
+        System.out.println(salut.getName());
      return "redirect:/politesse.htm";
     }   
     

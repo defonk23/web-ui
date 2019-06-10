@@ -25,7 +25,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 /**
  *
- * @author TN
+ * @author FONKEU
  */
 @Controller
 public class PolitesseController {
