@@ -5,23 +5,9 @@
  */
 package org.fonkeu.expertus.webui.controller;
 
-import java.net.URI;
-import java.net.URL;
-import org.fonkeu.expertus.webui.model.SalutUI;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springframework.web.util.UriComponents;
-import org.springframework.web.util.UriComponentsBuilder;
 
 /**
  *
@@ -29,13 +15,7 @@ import org.springframework.web.util.UriComponentsBuilder;
  */
 @Controller
 public class PolitesseController {
-    private final Logger log= LoggerFactory.getLogger(getClass());
-    @Autowired
-    private RestTemplate restTemplate;
-    @Value("${expertus.backend}")
-    private String backendURL;
-    
-    
+
     @GetMapping("/politesse.htm")
     public ModelAndView Politesse(){
         
